@@ -1,4 +1,4 @@
-// Copyright (c) 2012-2021 The Fujicoin Core developers
+// Copyright (c) 2012-2021 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -84,7 +84,7 @@ std::string CopyrightHolders(const std::string& strPrefix)
 
     // Make sure Fujicoin Core copyright is not removed by accident
     if (copyright_devs.find("Fujicoin Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The Fujicoin Core developers";
+        strCopyrightHolders += "\n" + strPrefix + "The Bitcoin Core developers";
     }
     return strCopyrightHolders;
 }
