@@ -1,12 +1,12 @@
-// Copyright (c) 2011-2021 The Bitcoin Core developers
+// Copyright (c) 2011-2021 The Fujicoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_BITCOIN_H
-#define BITCOIN_QT_BITCOIN_H
+#ifndef FUJICOIN_QT_FUJICOIN_H
+#define FUJICOIN_QT_FUJICOIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/fujicoin-config.h>
 #endif
 
 #include <interfaces/node.h>
@@ -18,7 +18,7 @@
 
 #include <QApplication>
 
-class BitcoinGUI;
+class FujicoinGUI;
 class ClientModel;
 class NetworkStyle;
 class OptionsModel;
@@ -32,13 +32,13 @@ class Init;
 } // namespace interfaces
 
 
-/** Main Bitcoin application object */
-class BitcoinApplication: public QApplication
+/** Main Fujicoin application object */
+class FujicoinApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit BitcoinApplication();
-    ~BitcoinApplication();
+    explicit FujicoinApplication();
+    ~FujicoinApplication();
 
 #ifdef ENABLE_WALLET
     /// Create payment server
@@ -65,7 +65,7 @@ public:
     /// Get process return value
     int getReturnValue() const { return returnValue; }
 
-    /// Get window identifier of QMainWindow (BitcoinGUI)
+    /// Get window identifier of QMainWindow (FujicoinGUI)
     WId getMainWinId() const;
 
     /// Setup platform style
@@ -90,7 +90,7 @@ Q_SIGNALS:
     void requestedInitialize();
     void requestedShutdown();
     void splashFinished();
-    void windowShown(BitcoinGUI* window);
+    void windowShown(FujicoinGUI* window);
 
 protected:
     bool event(QEvent* e) override;
@@ -99,7 +99,7 @@ private:
     std::optional<InitExecutor> m_executor;
     OptionsModel *optionsModel;
     ClientModel *clientModel;
-    BitcoinGUI *window;
+    FujicoinGUI *window;
     QTimer *pollShutdownTimer;
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer{nullptr};
@@ -116,4 +116,4 @@ private:
 
 int GuiMain(int argc, char* argv[]);
 
-#endif // BITCOIN_QT_BITCOIN_H
+#endif // FUJICOIN_QT_FUJICOIN_H

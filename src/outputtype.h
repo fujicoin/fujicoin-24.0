@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2021 The Bitcoin Core developers
+// Copyright (c) 2009-2021 The Fujicoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_OUTPUTTYPE_H
-#define BITCOIN_OUTPUTTYPE_H
+#ifndef FUJICOIN_OUTPUTTYPE_H
+#define FUJICOIN_OUTPUTTYPE_H
 
 #include <script/signingprovider.h>
 #include <script/standard.h>
@@ -51,4 +51,4 @@ CTxDestination AddAndGetDestinationForScript(FillableSigningProvider& keystore, 
 /** Get the OutputType for a CTxDestination */
 std::optional<OutputType> OutputTypeFromDestination(const CTxDestination& dest);
 
-#endif // BITCOIN_OUTPUTTYPE_H
+#endif // FUJICOIN_OUTPUTTYPE_H

@@ -1,9 +1,9 @@
-// Copyright (c) 2016-2021 The Bitcoin Core developers
+// Copyright (c) 2016-2021 The Fujicoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/fujicoin-config.h>
 #endif
 
 #include <chainparams.h>
@@ -59,17 +59,17 @@ static bool WalletAppInit(ArgsManager& args, int argc, char* argv[])
         return false;
     }
     if (argc < 2 || HelpRequested(args) || args.IsArgSet("-version")) {
-        std::string strUsage = strprintf("%s bitcoin-wallet version", PACKAGE_NAME) + " " + FormatFullVersion() + "\n";
+        std::string strUsage = strprintf("%s fujicoin-wallet version", PACKAGE_NAME) + " " + FormatFullVersion() + "\n";
 
         if (args.IsArgSet("-version")) {
             strUsage += FormatParagraph(LicenseInfo());
         } else {
             strUsage += "\n"
-                        "bitcoin-wallet is an offline tool for creating and interacting with " PACKAGE_NAME " wallet files.\n"
-                        "By default bitcoin-wallet will act on wallets in the default mainnet wallet directory in the datadir.\n"
+                        "fujicoin-wallet is an offline tool for creating and interacting with " PACKAGE_NAME " wallet files.\n"
+                        "By default fujicoin-wallet will act on wallets in the default mainnet wallet directory in the datadir.\n"
                         "To change the target wallet, use the -datadir, -wallet and -regtest/-signet/-testnet arguments.\n\n"
                         "Usage:\n"
-                        "  bitcoin-wallet [options] <command>\n";
+                        "  fujicoin-wallet [options] <command>\n";
             strUsage += "\n" + args.GetHelpMessage();
         }
         tfm::format(std::cout, "%s", strUsage);
@@ -117,7 +117,7 @@ MAIN_FUNCTION
 
     const auto command = args.GetCommand();
     if (!command) {
-        tfm::format(std::cerr, "No method provided. Run `bitcoin-wallet -help` for valid methods.\n");
+        tfm::format(std::cerr, "No method provided. Run `fujicoin-wallet -help` for valid methods.\n");
         return EXIT_FAILURE;
     }
     if (command->args.size() != 0) {

@@ -1,12 +1,12 @@
-// Copyright (c) 2021 The Bitcoin Core developers
+// Copyright (c) 2021 The Fujicoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 //! @file
-//! @brief Common init functions shared by bitcoin-node, bitcoin-wallet, etc.
+//! @brief Common init functions shared by fujicoin-node, fujicoin-wallet, etc.
 
-#ifndef BITCOIN_INIT_COMMON_H
-#define BITCOIN_INIT_COMMON_H
+#ifndef FUJICOIN_INIT_COMMON_H
+#define FUJICOIN_INIT_COMMON_H
 
 class ArgsManager;
 
@@ -19,4 +19,4 @@ bool StartLogging(const ArgsManager& args);
 void LogPackageVersion();
 } // namespace init
 
-#endif // BITCOIN_INIT_COMMON_H
+#endif // FUJICOIN_INIT_COMMON_H
