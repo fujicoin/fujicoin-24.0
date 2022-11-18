@@ -2,7 +2,7 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Fujicoin
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
  irc://#fujicoin-core-dev@libera.chat
-Source: https://github.com/bitcoin/bitcoin
+Source: https://github.com/fujicoin/fujicoin
 
 Files: *
 Copyright: 2009-2022, Fujicoin Core Developers
