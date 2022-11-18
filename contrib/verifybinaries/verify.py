@@ -21,8 +21,8 @@ from textwrap import indent
 
 WORKINGDIR = "/tmp/fujicoin_verify_binaries"
 HASHFILE = "hashes.tmp"
-HOST1 = "https://fujicoincore.org"
-HOST2 = "https://fujicoin.org"
+HOST1 = "https://bitcoincore.org"
+HOST2 = "https://bitcoin.org"
 VERSIONPREFIX = "fujicoin-core-"
 SIGNATUREFILENAME = "SHA256SUMS.asc"
 

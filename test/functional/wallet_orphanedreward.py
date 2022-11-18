@@ -46,7 +46,7 @@ class OrphanedBlockRewardTest(FujicoinTestFramework):
         })
         # The following abandontransaction is necessary to make the later
         # lines succeed, and probably should not be needed; see
-        # https://github.com/fujicoin/fujicoin/issues/14148.
+        # https://github.com/bitcoin/bitcoin/issues/14148.
         self.nodes[1].abandontransaction(txid)
         assert_equal(self.nodes[1].getbalances()["mine"], {
           "trusted": 10,
